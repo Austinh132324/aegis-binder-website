@@ -1,0 +1,114 @@
+.ab-page-header {
+  padding-block: 80px 48px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-bg) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ab-feature-sections {
+  padding-block: 72px;
+  display: block;
+}
+
+.ab-feature-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  padding-block: 48px;
+}
+
+.ab-feature-section + .ab-feature-section {
+  border-top: 1px solid var(--color-border);
+}
+
+.ab-feature-section--reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.ab-feature-section--reverse .ab-feature-section__copy {
+  order: 2;
+}
+
+.ab-feature-section__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ab-feature-section__copy h2 {
+  margin: 4px 0 0;
+}
+
+.ab-feature-section__copy p {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.ab-feature-section__copy ul {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ab-feature-section__copy ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--color-text);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.ab-feature-section__copy ul li svg {
+  color: var(--color-accent-blue);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.ab-feature-section__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 5 / 4;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(11, 35, 65, 0.08));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  color: var(--color-accent-blue);
+}
+
+@media (max-width: 1024px) {
+  .ab-feature-section,
+  .ab-feature-section--reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .ab-feature-section--reverse .ab-feature-section__copy {
+    order: initial;
+  }
+
+  .ab-feature-section__visual {
+    aspect-ratio: 3 / 2;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-page-header {
+    padding-block: 56px 36px;
+  }
+
+  .ab-feature-sections {
+    padding-block: 40px;
+  }
+
+  .ab-feature-section {
+    padding-block: 32px;
+  }
+
+  .ab-feature-section__copy p {
+    font-size: 1rem;
+  }
+}

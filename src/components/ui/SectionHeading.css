@@ -1,0 +1,32 @@
+.ab-section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.ab-section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.ab-section-heading__eyebrow {
+  margin: 0;
+}
+
+.ab-section-heading__title {
+  margin: 0;
+}
+
+.ab-section-heading__description {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 720px;
+}
+
+@media (max-width: 768px) {
+  .ab-section-heading__description {
+    font-size: 1rem;
+  }
+}

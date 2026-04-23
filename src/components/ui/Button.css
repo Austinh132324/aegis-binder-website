@@ -1,0 +1,73 @@
+.ab-button {
+  --btn-bg: var(--color-accent-blue);
+  --btn-bg-hover: var(--color-accent-blue-hover);
+  --btn-fg: var(--color-white);
+  --btn-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  border: 1px solid var(--btn-border);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease, box-shadow 140ms ease,
+    transform 140ms ease, border-color 140ms ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.ab-button:hover {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-fg);
+}
+
+.ab-button:active {
+  transform: translateY(1px);
+}
+
+.ab-button--lg {
+  padding: 14px 24px;
+  font-size: 1rem;
+}
+
+.ab-button--secondary {
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--color-navy);
+  --btn-fg: var(--color-navy);
+  --btn-border: var(--color-navy);
+}
+
+.ab-button--secondary:hover {
+  --btn-fg: var(--color-white);
+}
+
+.ab-button--ghost {
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--surface-subtle);
+  --btn-fg: var(--color-navy);
+  --btn-border: transparent;
+}
+
+.ab-button--full {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ab-button {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+
+  .ab-button--lg {
+    padding: 16px 20px;
+  }
+}

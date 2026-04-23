@@ -1,0 +1,122 @@
+.ab-hero {
+  position: relative;
+  padding-block: 88px 96px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-bg) 60%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ab-hero__glow {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(37, 99, 235, 0.18), rgba(37, 99, 235, 0));
+  pointer-events: none;
+}
+
+.ab-hero__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.ab-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 620px;
+}
+
+.ab-hero__title {
+  margin: 4px 0 0;
+}
+
+.ab-hero__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.ab-hero__ctas {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.ab-hero__visual {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ab-hero__visual-card {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 5 / 4;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(37, 99, 235, 0.18), transparent 60%),
+    linear-gradient(135deg, #0b2341, #1e3a8a 60%, #1d4ed8);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 40px;
+  overflow: hidden;
+}
+
+.ab-hero__shield {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 180px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
+}
+
+.ab-hero__ribbon {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-full);
+  padding: 8px 12px;
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+
+.ab-hero__ribbon--1 {
+  top: 18%;
+  left: -24px;
+}
+
+.ab-hero__ribbon--2 {
+  bottom: 16%;
+  right: -20px;
+}
+
+.ab-hero__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.ab-hero__chip--muted {
+  background: var(--surface-subtle);
+  color: var(--color-navy);
+}
+
+.ab-hero__chip--accent {
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--color-accent-blue);
+}

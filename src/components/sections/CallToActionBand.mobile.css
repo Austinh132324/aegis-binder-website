@@ -1,0 +1,32 @@
+@media (max-width: 1024px) {
+  .ab-cta-band__inner {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    gap: 24px;
+  }
+
+  .ab-cta-band__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-cta-band {
+    padding-block: 48px;
+  }
+
+  .ab-cta-band__inner {
+    padding: 28px;
+    border-radius: var(--radius-lg);
+  }
+
+  .ab-cta-band__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .ab-cta-band__actions .ab-button {
+    width: 100%;
+  }
+}

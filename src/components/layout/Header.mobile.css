@@ -1,0 +1,24 @@
+@media (max-width: 1024px) {
+  .ab-header__nav {
+    display: none;
+  }
+
+  .ab-header__inner {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ab-header__inner {
+    height: 64px;
+    gap: 12px;
+  }
+
+  .ab-header__actions {
+    display: none;
+  }
+
+  .ab-header__menu-btn {
+    display: inline-flex;
+  }
+}
