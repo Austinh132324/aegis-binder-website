@@ -396,6 +396,9 @@ export function AISection() {
               <AegisMascot size={148} />
             </div>
             <span className="eyebrow ab-ai-section__eyebrow">Meet Aegis — Your AI Assistant</span>
+            <span className="ab-ai-section__pronunciation" aria-label="Pronounced ee-jis">
+              pronounced <em>EE-jis</em>
+            </span>
             <h2 id="ai-title" className="ab-ai-section__title">
               Drop a PDF.<br />
               <span className="ab-ai-section__title-accent">Aegis handles the rest.</span>

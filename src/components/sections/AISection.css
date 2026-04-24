@@ -77,6 +77,21 @@
   color: rgba(167, 139, 250, 0.9);
 }
 
+.ab-ai-section__pronunciation {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.01em;
+}
+
+.ab-ai-section__pronunciation em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: var(--font-weight-medium);
+}
+
 .ab-ai-section__title {
   font-size: clamp(1.85rem, 2.5vw + 0.75rem, 2.85rem);
   font-weight: var(--font-weight-extrabold);
