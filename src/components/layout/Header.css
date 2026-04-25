@@ -117,7 +117,23 @@
   color: #93c5fd;
 }
 
-/* ─── Login button override ──────────────────────────────────────── */
+/* ─── Header button overrides (dark surface) ───────────────────── */
+
+.ab-header__actions .ab-button--secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+}
+
+.ab-header__actions .ab-button--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #ffffff;
+}
 
 .ab-header__actions .ab-button--primary {
   background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
