@@ -90,8 +90,11 @@ export function Header() {
           </nav>
 
           <div className="ab-header__actions">
-            <Button to="/login" variant="primary" size="md">
+            <Button to="/login" variant="secondary" size="md">
               Login
+            </Button>
+            <Button to="/contact" variant="primary" size="md">
+              Sign Up
             </Button>
           </div>
 

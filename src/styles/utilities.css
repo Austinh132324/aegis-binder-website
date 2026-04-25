@@ -26,3 +26,63 @@
 .no-scroll {
   overflow: hidden;
 }
+
+@keyframes aiGradientShine {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.ai-gradient {
+  background: linear-gradient(
+    100deg,
+    #0B2341 0%,
+    #1E3A8A 18%,
+    #4F46E5 34%,
+    #7C3AED 50%,
+    #D946EF 62%,
+    #7C3AED 78%,
+    #1E3A8A 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: aiGradientShine 6s linear infinite;
+  font-weight: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-gradient { animation: none; }
+}
+
+@keyframes tryGradientShine {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.try-gradient {
+  background: linear-gradient(
+    100deg,
+    #BFDBFE 0%,
+    #93C5FD 14%,
+    #60A5FA 28%,
+    #2563EB 42%,
+    #1E40AF 50%,
+    #2563EB 58%,
+    #60A5FA 72%,
+    #93C5FD 86%,
+    #BFDBFE 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: tryGradientShine 9s ease-in-out infinite;
+  font-weight: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .try-gradient { animation: none; }
+}

@@ -40,7 +40,10 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           ))}
         </ul>
         <div className="ab-mobile-menu__footer">
-          <Button to="/login" variant="primary" fullWidth size="lg">
+          <Button to="/contact" variant="primary" fullWidth size="lg">
+            Sign Up
+          </Button>
+          <Button to="/login" variant="secondary" fullWidth size="lg">
             Login
           </Button>
         </div>

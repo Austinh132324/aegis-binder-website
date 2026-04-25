@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "tsc --noEmit",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
     "docker": "docker build -t sure-companion-web . && docker run -d --init --name sure-companion-website -p 8080:80 sure-companion-web",
     "docker:dev": "docker build -f Dockerfile.dev -t sure-companion-web-dev . && docker run --rm --init -p 5173:5173 -v \"$PWD/src:/app/src\" -v \"$PWD/public:/app/public\" -v \"$PWD/index.html:/app/index.html\" sure-companion-web-dev"
   },
@@ -21,10 +23,18 @@
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
     "typescript": "^5.6.3",
-    "vite": "^5.4.10"
+    "typescript-eslint": "^8.59.0",
+    "vite": "^5.4.10",
+    "vitest": "^4.1.5"
   }
 }

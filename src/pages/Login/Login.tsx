@@ -57,8 +57,8 @@ export default function Login() {
             <div className="ab-login__content">
               <h1 className="ab-login__title">Portal login, coming soon.</h1>
               <p className="ab-login__copy">
-                The Sure Companion portal is on its way. In the meantime, if you'd like early access or want to learn more
-                about the platform, we'd love to hear from you.
+                The Sure Companion portal is on its way. In the meantime, if you&rsquo;d like early access or want to learn more
+                about the platform, we&rsquo;d love to hear from you.
               </p>
               <div className="ab-login__actions">
                 <Button to="/contact" size="lg">

@@ -5,6 +5,14 @@ interface FeatureCardProps {
   feature: Feature;
 }
 
+function highlightAI(text: string) {
+  return text.split(/\b(Aegis|AI)\b/g).map((part, i) =>
+    part === 'Aegis' || part === 'AI'
+      ? <span key={i} className="ai-gradient">{part}</span>
+      : <span key={i}>{part}</span>
+  );
+}
+
 const ICONS: Record<Feature['icon'], JSX.Element> = {
   users: (
     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
@@ -78,8 +86,8 @@ export function FeatureCard({ feature }: FeatureCardProps) {
       <div className="ab-feature-card__icon">
         <FeatureIcon name={feature.icon} />
       </div>
-      <h3 className="ab-feature-card__title">{feature.title}</h3>
-      <p className="ab-feature-card__description">{feature.description}</p>
+      <h3 className="ab-feature-card__title">{highlightAI(feature.title)}</h3>
+      <p className="ab-feature-card__description">{highlightAI(feature.description)}</p>
     </article>
   );
 }

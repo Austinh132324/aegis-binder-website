@@ -30,10 +30,10 @@ const AI_TASKS = [
   { name: 'Cross-sell Alert', detail: 'Notify when cross-sell score exceeds 70%',        badge: 'Aegis' },
 ];
 
-const POINTS = [
+const POINTS: Array<string | JSX.Element> = [
   'Extracts client, policy, and coverage data in seconds',
-  'Injects the new client into your portal with AI insights',
-  'Schedules AI-powered follow-up tasks automatically',
+  <>Injects the new client into your portal with <span className="ai-gradient">AI</span> insights</>,
+  <><span className="ai-gradient">AI</span>-powered follow-up tasks scheduled automatically</>,
 ];
 
 const STEP_HINT: Record<AIStep, string> = {
@@ -391,7 +391,7 @@ export function AISection() {
         <div className="ab-ai-section__grid">
 
           <div className="ab-ai-section__content animate slide-left">
-            <span className="ab-ai-section__eyebrow">Meet Aegis</span>
+            <span className="ab-ai-section__eyebrow">Meet <span className="ai-gradient">Aegis</span></span>
             <span className="ab-ai-section__pronunciation" aria-label="Pronounced ee-jis">
               pronounced <em>EE-jis</em>
             </span>
@@ -400,14 +400,14 @@ export function AISection() {
             </p>
             <h2 id="ai-title" className="ab-ai-section__title">
               Drop a PDF.<br />
-              <span className="ab-ai-section__title-accent">Aegis handles the rest.</span>
+              <span className="ai-gradient">Aegis handles the rest.</span>
             </h2>
             <p className="ab-ai-section__desc">
-              Aegis reads any standard policy document, extracts every field, injects the client into your portal, generates AI risk analytics, and schedules follow-up tasks — all from a single drop.
+              <span className="ai-gradient">Aegis</span> reads any standard policy document, extracts every field, injects the client into your portal, generates <span className="ai-gradient">AI</span> risk analytics, and schedules follow-up tasks — all from a single drop.
             </p>
             <ul className="ab-ai-section__points">
               {POINTS.map((p, i) => (
-                <li key={p} className={`animate fade-up delay-${i + 1}`}>
+                <li key={i} className={`animate fade-up delay-${i + 1}`}>
                   <svg viewBox="0 0 16 16" width="18" height="18" fill="none" aria-hidden="true">
                     <circle cx="8" cy="8" r="8" fill="rgba(124,58,237,0.18)" />
                     <path d="M5 8l2 2 4-4" stroke="#a78bfa" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />

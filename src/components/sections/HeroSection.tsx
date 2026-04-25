@@ -30,6 +30,24 @@ export function HeroSection() {
             </div>
           </div>
 
+          <p className="ab-hero__try">
+            <span className="try-gradient">Try For Yourself</span>
+            <svg
+              className="ab-hero__try-arrow"
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </p>
+
           <div className="ab-hero__demo" aria-hidden="true">
             <DemoChrome />
             <p className="ab-hero__demo-hint">Click Dashboard, Clients, or Policies to explore.</p>
