@@ -4,7 +4,12 @@ export interface NavLink {
   href?: string;
 }
 
-export const PRIMARY_NAV: NavLink[] = [
+export interface PrimaryNavLink {
+  label: string;
+  to: string;
+}
+
+export const PRIMARY_NAV: PrimaryNavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'Features', to: '/features' },
   { label: 'Security', to: '/security' },
