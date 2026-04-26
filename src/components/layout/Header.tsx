@@ -90,7 +90,7 @@ export function Header() {
           </nav>
 
           <div className="ab-header__actions">
-            <Button to="/login" variant="secondary" size="md">
+            <Button href="https://portal.surecompanion.com" variant="secondary" size="md">
               Login
             </Button>
             <Button to="/contact" variant="primary" size="md">

@@ -2,6 +2,15 @@
   .ab-header__nav {
     display: none;
   }
+
+  .ab-header__menu-btn {
+    display: inline-flex;
+  }
+
+  .ab-header__brand {
+    order: 99;
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -14,7 +23,7 @@
   }
 
   .ab-header__inner {
-    height: 64px;
+    height: 6rem;
     gap: 12px;
   }
 
@@ -22,8 +31,13 @@
     display: none;
   }
 
-  .ab-header__menu-btn {
-    display: inline-flex;
-    margin-left: auto;
+  /* Center logo to window width regardless of menu button width */
+  .ab-header__brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    order: 0;
+    margin-left: 0;
   }
 }

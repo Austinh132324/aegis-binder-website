@@ -11,7 +11,7 @@ export function Footer() {
       <Container>
         <div className="ab-footer__top">
           <div className="ab-footer__brand">
-            <LogoLockup size="md" />
+            <LogoLockup size="md" theme="light" />
             <p className="ab-footer__blurb">{FOOTER.blurb}</p>
           </div>
 
@@ -19,10 +19,16 @@ export function Footer() {
             <h4 className="ab-footer__heading">Explore</h4>
             <ul className="ab-footer__list">
               {FOOTER_NAV.map((link) => (
-                <li key={link.to}>
-                  <Link to={link.to} className="ab-footer__link">
-                    {link.label}
-                  </Link>
+                <li key={link.label}>
+                  {link.href ? (
+                    <a href={link.href} className="ab-footer__link">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link to={link.to!} className="ab-footer__link">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

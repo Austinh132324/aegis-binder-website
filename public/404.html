@@ -5,8 +5,9 @@
     <title>Sure Companion</title>
     <script>
       // GitHub Pages SPA redirect — preserves the path for client-side routing.
-      // pathSegmentsToKeep = 1 keeps the repo name segment (/sure-companion-website).
-      var segmentsToKeep = 1;
+      // segmentsToKeep = 0 for custom domain (surecompanion.com); use 1 only for
+      // project-page deploys at username.github.io/repo-name/.
+      var segmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +

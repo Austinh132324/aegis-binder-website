@@ -21,7 +21,7 @@ export function CallToActionBand() {
             <Button to={CTA_BAND.primaryCta.to} size="lg">
               {CTA_BAND.primaryCta.label}
             </Button>
-            <Button to={CTA_BAND.secondaryCta.to} variant="ghost" size="lg">
+            <Button href={CTA_BAND.secondaryCta.href} variant="ghost" size="lg">
               {CTA_BAND.secondaryCta.label}
             </Button>
           </div>

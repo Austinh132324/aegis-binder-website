@@ -1,6 +1,7 @@
 export interface NavLink {
   label: string;
-  to: string;
+  to?: string;
+  href?: string;
 }
 
 export const PRIMARY_NAV: NavLink[] = [
@@ -16,5 +17,5 @@ export const FOOTER_NAV: NavLink[] = [
   { label: 'Security', to: '/security' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Login', to: '/login' },
+  { label: 'Login', href: 'https://portal.surecompanion.com' },
 ];

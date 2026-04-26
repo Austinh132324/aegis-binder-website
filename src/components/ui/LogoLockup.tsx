@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import shieldUrl from '../../assets/logo/sure-companion-shield.png';
+import logoAlternateUrl from '../../assets/logo/sure-companion-logo-alternate.png';
+import logoWhiteUrl from '../../assets/logo/sure-companion-logo-white.png';
 import './LogoLockup.css';
 
 interface LogoLockupProps {
@@ -7,6 +9,9 @@ interface LogoLockupProps {
   size?: 'sm' | 'md' | 'lg';
   asLink?: boolean;
   to?: string;
+  /** Surface the logo sits on. 'dark' (blue/non-white) uses the alternate logo;
+   *  'light' (white) uses the white-named logo. Defaults to 'dark'. */
+  theme?: 'dark' | 'light';
 }
 
 export function LogoLockup({
@@ -14,7 +19,10 @@ export function LogoLockup({
   size = 'md',
   asLink = true,
   to = '/',
+  theme = 'dark',
 }: LogoLockupProps) {
+  const fullLogoSrc = theme === 'light' ? logoWhiteUrl : logoAlternateUrl;
+
   const content =
     variant === 'shield' ? (
       <img
@@ -23,13 +31,11 @@ export function LogoLockup({
         className={`ab-logo__shield-only ab-logo__shield-only--${size}`}
       />
     ) : (
-      <div className={`ab-logo ab-logo--${size}`}>
-        <img src={shieldUrl} alt="" className="ab-logo__icon" aria-hidden="true" />
-        <span className="ab-logo__wordmark" aria-label="Sure Companion">
-          <span className="ab-logo__word">Sure</span>
-          <span className="ab-logo__word ab-logo__word--accent">Companion</span>
-        </span>
-      </div>
+      <img
+        src={fullLogoSrc}
+        alt="Sure Companion"
+        className={`ab-logo__full ab-logo__full--${size}`}
+      />
     );
 
   if (!asLink) return content;

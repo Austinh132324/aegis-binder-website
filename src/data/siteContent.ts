@@ -36,7 +36,7 @@ export const CTA_BAND = {
   headline: 'See how Sure Companion fits your team.',
   copy: 'Walk through the platform with us and see how it supports the day-to-day of a producing agency.',
   primaryCta: { label: 'Request a demo', to: '/contact' },
-  secondaryCta: { label: 'Sign in', to: '/login' },
+  secondaryCta: { label: 'Sign in', href: 'https://portal.surecompanion.com' },
 };
 
 export const FOOTER = {

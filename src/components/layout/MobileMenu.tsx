@@ -43,7 +43,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           <Button to="/contact" variant="primary" fullWidth size="lg">
             Sign Up
           </Button>
-          <Button to="/login" variant="secondary" fullWidth size="lg">
+          <Button href="https://portal.surecompanion.com" variant="secondary" fullWidth size="lg">
             Login
           </Button>
         </div>

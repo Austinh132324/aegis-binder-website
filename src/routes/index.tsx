@@ -8,7 +8,6 @@ const Features = lazy(() => import('../pages/Features/Features'));
 const Security = lazy(() => import('../pages/Security/Security'));
 const About    = lazy(() => import('../pages/About/About'));
 const Contact  = lazy(() => import('../pages/Contact/Contact'));
-const Login    = lazy(() => import('../pages/Login/Login'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,7 +31,6 @@ export function AppRoutes() {
             <Route path="/security" element={<Security />} />
             <Route path="/about"    element={<About />} />
             <Route path="/contact"  element={<Contact />} />
-            <Route path="/login"    element={<Login />} />
             <Route path="*"         element={<Navigate to="/" replace />} />
           </Routes>
         </div>
