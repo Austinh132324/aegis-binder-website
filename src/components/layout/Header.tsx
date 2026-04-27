@@ -93,7 +93,7 @@ export function Header() {
             <Button href="https://portal.surecompanion.com" variant="secondary" size="md">
               Login
             </Button>
-            <Button to="/contact" variant="primary" size="md">
+            <Button href="https://portal.surecompanion.com/signup" variant="primary" size="md">
               Sign Up
             </Button>
           </div>
