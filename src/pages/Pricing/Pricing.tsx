@@ -59,15 +59,25 @@ function PlanCard({ plan, billing }: { plan: PricingPlan; billing: Billing }) {
         <p className="ab-price-card__best-for">{plan.bestFor}</p>
       </header>
 
-      <Button
-        to={to}
-        href={href}
-        variant={plan.highlight ? 'primary' : 'secondary'}
-        size="lg"
-        fullWidth
-      >
-        {plan.cta.label}
-      </Button>
+      {href ? (
+        <Button
+          href={href}
+          variant={plan.highlight ? 'primary' : 'secondary'}
+          size="lg"
+          fullWidth
+        >
+          {plan.cta.label}
+        </Button>
+      ) : (
+        <Button
+          to={to!}
+          variant={plan.highlight ? 'primary' : 'secondary'}
+          size="lg"
+          fullWidth
+        >
+          {plan.cta.label}
+        </Button>
+      )}
 
       <div className="ab-price-card__lists">
         <div className="ab-price-card__list">
