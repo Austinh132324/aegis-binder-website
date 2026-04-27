@@ -5,6 +5,7 @@ import { AegisSpinner } from '../components/ui/AegisSpinner';
 
 const Home     = lazy(() => import('../pages/Home/Home'));
 const Features = lazy(() => import('../pages/Features/Features'));
+const Pricing  = lazy(() => import('../pages/Pricing/Pricing'));
 const Security = lazy(() => import('../pages/Security/Security'));
 const About    = lazy(() => import('../pages/About/About'));
 const Contact  = lazy(() => import('../pages/Contact/Contact'));
@@ -28,6 +29,7 @@ export function AppRoutes() {
           <Routes>
             <Route path="/"         element={<Home />} />
             <Route path="/features" element={<Features />} />
+            <Route path="/pricing"  element={<Pricing />} />
             <Route path="/security" element={<Security />} />
             <Route path="/about"    element={<About />} />
             <Route path="/contact"  element={<Contact />} />

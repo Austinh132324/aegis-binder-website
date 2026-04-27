@@ -12,6 +12,7 @@ export interface PrimaryNavLink {
 export const PRIMARY_NAV: PrimaryNavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'Features', to: '/features' },
+  { label: 'Pricing', to: '/pricing' },
   { label: 'Security', to: '/security' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
@@ -19,6 +20,7 @@ export const PRIMARY_NAV: PrimaryNavLink[] = [
 
 export const FOOTER_NAV: NavLink[] = [
   { label: 'Features', to: '/features' },
+  { label: 'Pricing', to: '/pricing' },
   { label: 'Security', to: '/security' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
